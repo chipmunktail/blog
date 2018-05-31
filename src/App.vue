@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <div>
-        <span class="log">&lt;/HJDTL&gt;</span>
+        <span class="log" @click="index">&lt;/HJDTL&gt;</span>
       </div>
     </header>
     <router-view/>
@@ -13,14 +13,19 @@
   export default {
     name: 'App',
     mounted () {
-      if (this.$route.redirectedFrom) {
-        this.$axios.get(`/from${this.$route.redirectedFrom}`)
+      if (document.referrer) {
+        this.$axios.get(`/from/${document.referrer}`)
           .then((res) => {
             console.log(res)
           })
           .catch((err) => {
             console.log(err)
           })
+      }
+    },
+    methods: {
+      index () {
+        this.$router.push('/')
       }
     }
   }
@@ -60,5 +65,6 @@
   .log {
     display: inline-block;
     transform: rotate(-5deg);
+    cursor: pointer;
   }
 </style>

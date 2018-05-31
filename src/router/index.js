@@ -12,7 +12,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/:from',
+      path: '/',
       name: 'index',
       component: index,
       redirect: '/articlelist',
