@@ -11,7 +11,18 @@
 
 <script>
   export default {
-    name: 'App'
+    name: 'App',
+    mounted () {
+      if (this.$route.redirectedFrom) {
+        this.$axios.get(`/from${this.$route.redirectedFrom}`)
+          .then((res) => {
+            console.log(res)
+          })
+          .catch((err) => {
+            console.log(err)
+          })
+      }
+    }
   }
 </script>
 
@@ -45,8 +56,9 @@
     width: 1024px;
     text-align: left;
   }
-  .log{
+
+  .log {
     display: inline-block;
-    transform:rotate(-5deg);
+    transform: rotate(-5deg);
   }
 </style>
