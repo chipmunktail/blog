@@ -10,22 +10,29 @@
 </template>
 
 <script>
+  import config from '../config/dev.env'
+
   export default {
     name: 'App',
     mounted () {
-      if (document.referrer) {
-        this.$axios.get(`/from/${document.referrer}`)
-          .then((res) => {
-            console.log(res)
-          })
-          .catch((err) => {
-            console.log(err)
-          })
+      if (config.NODE_ENV !== '"development"') {
+        this.log()
       }
     },
     methods: {
       index () {
         this.$router.push('/')
+      },
+      log () {
+        if (document.referrer) {
+          this.$axios.get(`/from/${document.referrer}`)
+            .then((res) => {
+              console.log(res)
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+        }
       }
     }
   }

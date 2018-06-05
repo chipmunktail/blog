@@ -4,16 +4,20 @@
       <Menu/>
     </div>
     <router-view/>
-    <div class="right">coming soon!</div>
+    <div class="right">
+      <right/>
+    </div>
   </div>
 </template>
 
 <script>
   import Menu from './left/menu'
   import Class from './middle/class'
+  import Right from './right/right'
 
   export default {
     components: {
+      Right,
       Class,
       Menu},
     name: 'index'
@@ -36,11 +40,11 @@
   }
   .right{
     width: 238px;
-    height: 300px;
+    height: auto;
     display: inline-block;
-    line-height: 250px;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.9);
+    /*line-height: 250px;*/
+    /*text-align: center;*/
+    /*background: rgba(0, 0, 0, 0.9);*/
     color: #f0f0f0;
     border-radius: 3px;
   }
