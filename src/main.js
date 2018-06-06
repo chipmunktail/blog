@@ -6,6 +6,7 @@ import router from './router'
 import store from './store/index'
 import axios from 'axios'
 import '@/assets/common.css'
+import './assets/font_697398_rg1bwtgagnndbo6r/iconfont.css'
 axios.defaults.baseURL = 'http://193.112.200.223:4000'
 Vue.prototype.$axios = axios
 

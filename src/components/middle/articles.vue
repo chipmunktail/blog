@@ -8,14 +8,17 @@
     <div class="info-con">
       <div class="tag-con">
         <div>相关标签：</div>
-        <a href="/#" class="tag" v-for="n in tags" v-bind:key="n.id">{{n.text}}</a>
+        <tag v-for="n in tags" v-bind:key="n.id" :tag="n" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import Tag from '../common/tag'
+
   export default {
+    components: {Tag},
     name: 'articles',
     data () {
       return {
@@ -72,20 +75,5 @@
   .tag-con {
     display: flex;
     justify-content: flex-start;
-  }
-
-  .tag {
-    height: 24px;
-    text-align: center;
-    line-height: 24px;
-    margin: 0 2px;
-    padding: 0 5px;
-    -webkit-transition-property: background-color;
-    -webkit-transition-duration: 0.4s;
-    -webkit-transition-timing-function: ease;
-  }
-
-  .tag:hover {
-    background-color: #cecece;
   }
 </style>
