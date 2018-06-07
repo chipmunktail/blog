@@ -1,10 +1,6 @@
 <template>
   <div class="tags-con">
-    <a class="tag" v-for="n in tags" v-bind:key="n.id" :title="n.describes">
-      <i :class="'iconfont '+n.icon"></i>
-      {{n.text}}
-    </a>
-    <tag v-for="n in tags" v-bind:key="n.id" :tag="n" />
+    <tag v-for="n in tags" v-bind:key="n.id" :tag="n"></tag>
   </div>
 </template>
 

@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/index'
+// import index from '@/components/index'
 import articlelist from '@/components/middle/articlelist'
 import class_ from '@/components/middle/class'
 import articles from '@/components/middle/articles'
 import think from '@/components/middle/think'
+import qq from '@/components/qq'
 
 Vue.use(Router)
 
@@ -13,9 +14,9 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: index,
-      redirect: '/articlelist',
+      name: 'qq',
+      component: qq,
+      // redirect: '/articlelist',
       children: [
         {
           path: '/articlelist',
@@ -38,6 +39,11 @@ export default new Router({
           component: think
         }
       ]
+    },
+    {
+      path: '/qq',
+      name: 'qq',
+      component: qq
     }
   ]
 })
