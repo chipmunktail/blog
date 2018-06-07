@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <header v-if="$route.name!=='qq'">
+    <header>
       <div>
         <span class="log" @click="index">&lt;/HJDTL&gt;</span>
       </div>
@@ -39,16 +39,7 @@
 </script>
 
 <style>
-  @media screen and (max-width: 1023px) {
-    #app {
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100%;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
+  /*@media screen and (min-width: 1024px) {*/
     #app {
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -84,5 +75,5 @@
       transform: rotate(-5deg);
       cursor: pointer;
     }
-  }
+  /*}*/
 </style>
