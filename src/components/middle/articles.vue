@@ -75,5 +75,6 @@
   .tag-con {
     display: flex;
     justify-content: flex-start;
+    align-items: center;
   }
 </style>
