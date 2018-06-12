@@ -1,7 +1,8 @@
 <template>
   <span>
     <a class="tag" :title="tag.describes">
-      <i :class="'iconfont '+tag.icon"></i>
+      <i :class="'iconfont '+tag.icon" :style="'color:'+randomColor" @mouseover="changeColor"
+         @mouseout="remainColor"></i>
       {{tag.text}}
     </a>
   </span>
@@ -10,11 +11,36 @@
 <script>
   export default {
     props: ['tag'],
-    name: 'tag'
+    name: 'tag',
+    data () {
+      return {
+        tempColor: ''
+      }
+    },
+    methods: {
+      changeColor (event) {
+        this.tempColor = event.target.style.cssText.split(';')[0].split(':')[1]
+        event.target.style.color = this.randomColors()
+      },
+      remainColor (event) {
+        event.target.style.color = this.tempColor
+      },
+      randomColors () {
+        let r = Math.random() * 255
+        let g = Math.random() * 255
+        let b = Math.random() * 255
+        return `rgb(${r},${g},${b})`
+      }
+    },
+    computed: {
+      randomColor () {
+        return this.randomColors()
+      }
+    }
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .tag {
     height: 25px;
     line-height: 25px;
@@ -23,6 +49,7 @@
     margin: 5px;
     padding: 0 8px;
     cursor: pointer;
+    color: rgba(67, 67, 67, 0.9);
     background-color: rgba(248, 248, 248, 0.75);
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.4s;
@@ -31,6 +58,10 @@
 
   .tag:hover {
     background-color: rgb(195, 195, 195);
+  }
+
+  i {
+    color: #000;
   }
 
   i:hover {

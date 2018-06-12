@@ -63,7 +63,7 @@
 
   a {
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.9);
+    color: #000;
   }
 
   ul {
@@ -85,8 +85,8 @@
   }
 
   .active {
-    background: black;
-    border-radius: 3px;
+    background: rgba(67, 67, 67, 0.9);
+    border-radius: 2px;
     a {
       color: #f0f0f0;
     }
