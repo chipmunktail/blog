@@ -1,7 +1,9 @@
 <template>
   <div class="articlelist">
     <div class="article-box" v-for="n in articleList" :key="n.title">
-      <img :src="n.imgurl" class="article-img"/>
+      <div class="article-img-con">
+        <img :src="n.imgurl" class="article-img"/>
+      </div>
       <div class="article-left">
         <div class="article-title">
           <router-link class="article-link" :to="`/articles/${n.href}`">{{n.title}}</router-link>
@@ -47,7 +49,7 @@
   .article-box {
     border-radius: 3px;
     margin: 0 0 5px 0;
-    padding: 5px 0;
+    padding: 5px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.3);
     justify-content: space-between;
@@ -59,9 +61,18 @@
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  .article-img {
+  .article-img-con{
     width: 100px;
     height: 100px;
+    border-radius: 2px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .article-img {
+    height: 100%;
+    width: auto;
   }
 
   .article-left {
