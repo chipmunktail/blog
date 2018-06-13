@@ -2,7 +2,7 @@
   <div class="articles">
     <div class="article-con">
       <h1>{{article.title}}</h1>
-      <div v-html="article.content">
+      <div v-html="article.content" v-highlight>
       </div>
     </div>
     <div class="info-con">
