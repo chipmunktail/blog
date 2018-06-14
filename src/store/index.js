@@ -7,7 +7,8 @@ Vue.use(Vuex)
 let state = {
   menuList: [{text: '文章', href: '/articlelist'}],
   classList: [],
-  article: []
+  article: [],
+  articleTest: []
 }
 
 let getters = {
@@ -33,6 +34,16 @@ let actions = {
   getArticle ({commit, articleId}) {
     // axios.get('/getArticle?'+articleId).then()
     commit('change_get_Article', {title: 'title', content: 'contentcontentcontent'})
+  },
+  // TEST 获取article
+  getArticleTest ({commit}) {
+    axios.get('http://193.112.200.223:4000/articleTest')
+      .then((res) => {
+        commit('setArticleTest', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 }
 
@@ -51,6 +62,10 @@ let mutations = {
   // 获取和改变文章数据
   change_get_Article (state, article) {
     state.article = article
+  },
+  // TEST 获取文章
+  setArticleTest (state, list) {
+    state.articleTest = list
   }
 }
 

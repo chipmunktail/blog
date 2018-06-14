@@ -5,6 +5,7 @@ import articlelist from '@/components/middle/articlelist'
 import class_ from '@/components/middle/class'
 import articles from '@/components/middle/articles'
 import think from '@/components/middle/think'
+import articletest from '@/components/middle/articleTest'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
           path: '/think',
           name: 'think',
           component: think
+        },
+        {
+          path: '/articletest',
+          name: 'articletest',
+          component: articletest
         }
       ]
     }
