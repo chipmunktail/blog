@@ -5,6 +5,7 @@ import articlelist from '@/components/middle/articlelist'
 import class_ from '@/components/middle/class'
 import articles from '@/components/middle/articles'
 import think from '@/components/middle/think'
+import articlelisttest from '@/components/middle/articleListTest'
 import articletest from '@/components/middle/articleTest'
 
 Vue.use(Router)
@@ -39,7 +40,12 @@ export default new Router({
           component: think
         },
         {
-          path: '/articletest',
+          path: '/articlelisttest',
+          name: 'articlelisttest',
+          component: articlelisttest
+        },
+        {
+          path: '/articletest/:articleid',
           name: 'articletest',
           component: articletest
         }

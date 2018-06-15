@@ -40,14 +40,15 @@
       $route: function (n, o) {
         if (n.name === 'articles' || n.name === 'articlelist') {
           this.active = 'articlelist'
+        } else {
+          this.active = n.name
         }
-        if (n.name === 'class') {
-          this.active = 'class'
-        }
-        if (n.name === 'think') {
-          this.active = 'think'
-        }
-        console.log(n.name)
+        // if (n.name === 'class') {
+        //   this.active = 'class'
+        // }
+        // if (n.name === 'think') {
+        //   this.active = 'think'
+        // }
       }
     }
   }
