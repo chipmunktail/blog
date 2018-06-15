@@ -1,12 +1,12 @@
 <template>
   <div class="article_test">
-    <div class="article-box" v-for="n in article" :key="n.title">
+    <div class="article-box" v-for="(n,i) in article" :key="n.title">
       <div class="article-img-con">
         <img :src="n.img_url" class="article-img"/>
       </div>
       <div class="article-left">
         <div class="article-title">
-          <router-link class="article-link" :to="`/articletest/${n.id}`">{{n.title}}</router-link>
+          <router-link class="article-link" :to="`/articletest/${i}`">{{n.title}}</router-link>
         </div>
         <div class="article-content">{{n.describe}}</div>
         <div class="article-info">

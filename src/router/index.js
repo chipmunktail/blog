@@ -45,7 +45,7 @@ export default new Router({
           component: articlelisttest
         },
         {
-          path: '/articletest/:articleid',
+          path: '/articletest/:index',
           name: 'articletest',
           component: articletest
         }

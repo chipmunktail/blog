@@ -38,8 +38,7 @@
     },
     computed: {
       article () {
-        console.log(this.$store.state.articleTest, '=============')
-        return this.$store.state.articleTest[this.$route.params.articleid]
+        return this.$store.state.articleTest[this.$route.params.index]
       }
     }
   }
