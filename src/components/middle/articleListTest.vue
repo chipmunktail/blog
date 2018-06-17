@@ -22,9 +22,9 @@
 <script>
   export default {
     name: 'article-list-test',
-    created () {
-      this.$store.dispatch('getArticleTest')
-    },
+    // created () {
+    //   this.$store.dispatch('getArticleTest')
+    // },
     computed: {
       article () {
         return this.$store.state.articleTest

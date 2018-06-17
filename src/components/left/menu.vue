@@ -1,7 +1,7 @@
 <template>
   <div class="menu">
     <ul>
-      <li v-for="n in menuList" :key="n.href" :class="{active:(active===n.href.split('/')[1])}">
+      <li v-for="n in menuList" :key="n.href" :class="{active:(active===n.href.split('/')[1])}" @click="action">
         <router-link :to="n.href" class="link">{{n.text}}</router-link>
       </li>
       <!--<li @click="getClassList(n)">文章内容</li>-->
@@ -31,6 +31,12 @@
       // 更换中间类别数据
       getClassList (classId) {
         store.dispatch('getClassList', classId)
+      },
+      // 相应路由 相关操作
+      action () {
+        if (this.$route.name === 'articlelisttest') {
+          this.$store.dispatch('getArticleTest')
+        }
       }
     },
     computed: {

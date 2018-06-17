@@ -44,6 +44,16 @@ let actions = {
       .catch((err) => {
         console.log(err)
       })
+  },
+  // tag 文章
+  filterByTag ({commit}, tagId) {
+    axios.get('http://193.112.200.223:4000/filterByTag', {params: {tagId: tagId}})
+      .then((res) => {
+        commit('setArticleTest', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 }
 

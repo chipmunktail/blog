@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span @click="getArticle">
     <a class="tag" :title="tag.describes">
       <i :class="'iconfont '+tag.icon" :style="'color:'+randomColor" @mouseover="changeColor"
          @mouseout="remainColor"></i>
@@ -30,6 +30,12 @@
         let g = Math.random() * 255
         let b = Math.random() * 255
         return `rgb(${r},${g},${b})`
+      },
+      // 根据tagId过滤文章
+      getArticle () {
+        console.log(this.tag, '///////////////')
+        this.$router.push('/articlelisttest')
+        this.$store.dispatch('filterByTag', this.tag.id)
       }
     },
     computed: {
