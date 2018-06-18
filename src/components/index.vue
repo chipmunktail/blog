@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    padding: 54px 0 0 0;
+    padding: 44px 0 0 0;
   }
   .menu{
     width: 130px;

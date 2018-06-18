@@ -47,7 +47,7 @@
 
   .tags-con::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background-color: #000;
+    background-color: rgba(67, 67, 67, 0.9);
   }
 
   .tag {

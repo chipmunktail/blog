@@ -1,7 +1,7 @@
 <template>
   <span @click="getArticle">
     <a class="tag" :title="tag.describes">
-      <i :class="'iconfont '+tag.icon" :style="'color:'+randomColor" @mouseover="changeColor"
+      <i :class="'iconfont '+tag.icon" @mouseover="changeColor"
          @mouseout="remainColor"></i>
       {{tag.text}}
     </a>
@@ -33,7 +33,6 @@
       },
       // 根据tagId过滤文章
       getArticle () {
-        console.log(this.tag, '///////////////')
         this.$router.push('/articlelisttest')
         this.$store.dispatch('filterByTag', this.tag.id)
       }

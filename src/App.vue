@@ -47,15 +47,17 @@
       min-height: 100%;
       height: auto;
       min-width: 1024px;
-      background: -webkit-linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);
-      background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);
+      /*background: -webkit-linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
+      /*background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
+      background: -webkit-linear-gradient(0deg,#FFFFFF, #dff3ff,#CCFFE8, #ffd891, #ffaa9f);
+      background: linear-gradient(0deg,#FFFFFF, #dff3ff,#CCFFE8, #ffd891, #ffaa9f);
     }
 
     header {
       width: 100%;
       background: rgba(67, 67, 67, 0.9);
       margin: 0 0 5px 0;
-      padding: 10px;
+      padding: 5px;
       font-size: 25px;
       font-family: Arial;
       color: rgba(240, 240, 240, 0.6);
