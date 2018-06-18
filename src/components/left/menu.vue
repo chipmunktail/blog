@@ -46,6 +46,8 @@
       $route: function (n, o) {
         if (n.name === 'articles' || n.name === 'articlelist') {
           this.active = 'articlelist'
+        } else if (n.name === 'articlelisttest' || n.name === 'articletest') {
+          this.active = 'articlelisttest'
         } else {
           this.active = n.name
         }

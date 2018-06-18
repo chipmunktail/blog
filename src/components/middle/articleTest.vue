@@ -26,6 +26,7 @@
       }
     },
     mounted () {
+      this.articlePV()// 访问次数
       this.getTag(this.article.tag)
     },
     methods: {
@@ -33,6 +34,12 @@
         this.$axios.get('/getTag', {params: {id: this.article.tag}})
           .then((e) => {
             this.tags = e.data.data
+          })
+      },
+      articlePV () {
+        this.$axios.get('articlePV', {params: {articleId: this.article.id}})
+          .then((e) => {
+            console.log(e)
           })
       }
     },
