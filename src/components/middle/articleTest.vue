@@ -26,8 +26,9 @@
       }
     },
     mounted () {
-      this.articlePV()// 访问次数
-      this.getTag(this.article.tag)
+      this.$store.dispatch('getArticleTest') // 获取文章列表
+      this.articlePV() // 访问次数
+      this.getTag(this.article.tag) // 获取tag
     },
     methods: {
       getTag () {

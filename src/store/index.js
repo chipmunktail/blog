@@ -8,7 +8,8 @@ let state = {
   menuList: [{text: '文章', href: '/articlelist'}],
   classList: [],
   article: [],
-  articleTest: []
+  articleTest: [],
+  thinkList: []
 }
 
 let getters = {
@@ -54,6 +55,17 @@ let actions = {
       .catch((err) => {
         console.log(err)
       })
+  },
+  // 想法列表
+  getThinkList ({commit}, thinkId) {
+    const params = thinkId ? {thinkId: thinkId} : ''
+    axios.get('http://193.112.200.223:4000/thinkList', {params: params})
+      .then((res) => {
+        commit('setThinkList', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }
 }
 
@@ -76,6 +88,10 @@ let mutations = {
   // TEST 获取文章
   setArticleTest (state, list) {
     state.articleTest = list
+  },
+  // 想法列表
+  setThinkList (state, list) {
+    state.thinkList = list
   }
 }
 
