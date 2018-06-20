@@ -40,7 +40,23 @@
 
 <style>
   /*@media screen and (min-width: 1024px) {*/
+  html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  body::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(67, 67, 67, 0.9);
+  }
     #app {
+      margin: 0;
+      padding: 0;
       font-family: 'Avenir', Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
