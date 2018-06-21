@@ -20,7 +20,7 @@
 </template>
 
 <script>
-  import timeFormat from '@/utils/timeFormat'
+  import {timeFormat} from '@/utils/filter'
 
   export default {
     name: 'article-list-test',

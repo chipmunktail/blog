@@ -9,7 +9,8 @@ let state = {
   classList: [],
   article: [],
   articleTest: [],
-  thinkList: []
+  thinkList: [],
+  tags: [] // 标签数组
 }
 
 let getters = {
@@ -46,11 +47,21 @@ let actions = {
         console.log(err)
       })
   },
-  // tag 文章
-  filterByTag ({commit}, tagId) {
-    axios.get('http://193.112.200.223:4000/filterByTag', {params: {tagId: tagId}})
+  // 过滤 文章
+  filterArticle ({commit}, tagId) {
+    axios.get('http://193.112.200.223:4000/filterArticle', {params: {tagId: tagId}})
       .then((res) => {
         commit('setArticleTest', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  // 过滤 想法
+  filterThink ({commit}, tagId) {
+    axios.get('http://193.112.200.223:4000/filterThink', {params: {tagId: tagId}})
+      .then((res) => {
+        commit('setThinkList', res.data.data)
       })
       .catch((err) => {
         console.log(err)
@@ -62,6 +73,20 @@ let actions = {
     axios.get('http://193.112.200.223:4000/thinkList', {params: params})
       .then((res) => {
         commit('setThinkList', res.data.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  },
+  // 获取tag
+  getTags ({commit}, type) {
+    let params = {}
+    if (typeof type === 'number') {
+      params = {type: type}
+    }
+    axios.get('http://193.112.200.223:4000/getTag', {params: params})
+      .then((res) => {
+        commit('setTags', res.data.data)
       })
       .catch((err) => {
         console.log(err)
@@ -92,6 +117,10 @@ let mutations = {
   // 想法列表
   setThinkList (state, list) {
     state.thinkList = list
+  },
+  // 标签
+  setTags (state, list) {
+    state.tags = list
   }
 }
 

@@ -10,20 +10,9 @@
   export default {
     components: {Tag},
     name: 'right',
-    data () {
-      return {
-        tags: []
-      }
-    },
-    created () {
-      this.getTag()
-    },
-    methods: {
-      getTag () {
-        this.$axios.get('/getTag')
-          .then((e) => {
-            this.tags = e.data.data
-          })
+    computed: {
+      tags () {
+        return this.$store.state.tags
       }
     }
   }
@@ -67,7 +56,8 @@
   .tag:hover {
     background-color: rgb(195, 195, 195);
   }
-  i:hover{
+
+  i:hover {
     color: #55a532;
   }
 </style>

@@ -36,6 +36,11 @@
       action () {
         if (this.$route.name === 'articlelisttest') {
           this.$store.dispatch('getArticleTest')
+          this.$store.dispatch('getTags', 0)
+        }
+        if (this.$route.name === 'think') {
+          this.$store.dispatch('getThinkList')
+          this.$store.dispatch('getTags', 1)
         }
       }
     },

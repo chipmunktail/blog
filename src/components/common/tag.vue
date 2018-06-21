@@ -1,5 +1,5 @@
 <template>
-  <span @click="getArticle">
+  <span @click="getByfilter">
     <a class="tag" :title="tag.describes">
       <i :class="'iconfont '+tag.icon" @mouseover="changeColor"
          @mouseout="remainColor"></i>
@@ -32,9 +32,15 @@
         return `rgb(${r},${g},${b})`
       },
       // 根据tagId过滤文章
-      getArticle () {
-        this.$router.push('/articlelisttest')
-        this.$store.dispatch('filterByTag', this.tag.id)
+      getByfilter () {
+        if (this.tag.type === 0) {
+          this.$router.push('/articlelisttest')
+          this.$store.dispatch('filterArticle', this.tag.id)
+        }
+        if (this.tag.type === 1) {
+          this.$router.push('/think')
+          this.$store.dispatch('filterThink', this.tag.id)
+        }
       }
     },
     computed: {
@@ -56,6 +62,7 @@
     cursor: pointer;
     color: rgba(67, 67, 67, 0.9);
     background-color: rgba(248, 248, 248, 0.75);
+    box-shadow: 0 0 6px 1px #e0e0e0;
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;

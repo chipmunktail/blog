@@ -1,4 +1,4 @@
-const format = sj => {
+export const timeFormat = sj => {
   let countDay = 7 // 计算倒数的天数
   const now = Date.now() // 当前时间戳
 
@@ -26,5 +26,23 @@ const format = sj => {
   }
   return result
 }
+export const matchTag = (id, index, tags) => {
+  if (id) {
+    let ids = id.split(',')
+    let arr = []
 
-export default format
+    const t = () => {
+      for (let i of ids) {
+        for (let n of tags) {
+          if (+n.id === +i) {
+            arr.push(n.text)
+          }
+        }
+      }
+    }
+    t()
+    return arr
+  } else {
+    return ''
+  }
+}
