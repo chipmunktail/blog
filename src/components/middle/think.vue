@@ -1,7 +1,9 @@
 <template>
   <div class="think">
     <div v-for="n in thinkList" :key="n.id" class="think-box">
-      <tag v-for="z in matchTags(n.tag,tags)" :key="z.id" :tag="z" />
+      <div :class="n.tag?'header':''">
+        <tag v-for="z in matchTags(n.tag,tags)" :key="z.id" :tag="z"/>
+      </div>
       <div v-html="n.content" v-highlight></div>
       <div class="time">{{n.date | timeFormat}}</div>
     </div>
@@ -68,9 +70,21 @@
     padding: 5px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     -webkit-transition-property: background-color;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;
+  }
+
+  .think-box:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .header {
+    padding-bottom: 3px;
+    border-bottom: 1px solid #e5e5e5;
+    /*box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.1);*/
   }
 
   .time {

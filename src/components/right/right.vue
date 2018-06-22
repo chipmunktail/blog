@@ -26,7 +26,9 @@
     height: 225px;
     overflow-y: scroll;
     background-color: rgba(248, 248, 248, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     color: #000;
+    border-radius: 3px;
   }
 
   .tags-con::-webkit-scrollbar {

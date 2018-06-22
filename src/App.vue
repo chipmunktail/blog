@@ -71,12 +71,13 @@
 
     header {
       width: 100%;
-      background: rgba(67, 67, 67, 0.9);
       margin: 0 0 5px 0;
       padding: 5px;
       font-size: 25px;
       font-family: Arial;
+      background: rgba(67, 67, 67, 0.9);
       color: rgba(240, 240, 240, 0.6);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
       text-align: center;
       user-select: none;
       position: fixed;

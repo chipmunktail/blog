@@ -65,12 +65,16 @@
   }
 
   .article-con {
+    border-radius: 3px;
     background-color: rgba(248, 248, 248, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     padding: 1px 10px;
   }
 
   .info-con {
+    border-radius: 3px;
     background-color: rgba(248, 248, 248, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     padding: 10px;
     margin: 5px 0 0 0;
   }

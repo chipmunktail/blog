@@ -100,6 +100,7 @@
 
   .active {
     background: rgba(67, 67, 67, 0.9);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     border-radius: 2px;
     a {
       color: #f0f0f0;

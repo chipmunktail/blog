@@ -62,14 +62,20 @@
     cursor: pointer;
     color: rgba(67, 67, 67, 0.9);
     background-color: rgba(248, 248, 248, 0.75);
-    box-shadow: 0 0 6px 1px #e0e0e0;
-    -webkit-transition-property: background-color;
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);*/
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16);
+    transition-duration: 0.4s;
+    transition-property: background-color, transform, box-shadow, margin, opacity, width;
+    transition-timing-function: ease;
+    -webkit-transition-property: background-color, transform, box-shadow, margin, opacity, width;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;
   }
 
   .tag:hover {
-    background-color: rgb(195, 195, 195);
+    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.1);
+    /*background-color: rgb(195, 195, 195);*/
+    /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);*/
   }
 
   i {

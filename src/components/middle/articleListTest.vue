@@ -54,15 +54,20 @@
     margin: 0 0 5px 0;
     /*padding: 5px;*/
     display: flex;
-    background-color: rgba(255, 255, 255, 0.8);
     justify-content: space-between;
-    -webkit-transition-property: background-color;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    -webkit-transition-property: background-color, box-shadow;
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;
   }
 
   .article-box:hover {
     background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.1);
   }
 
   .article-img-con {
