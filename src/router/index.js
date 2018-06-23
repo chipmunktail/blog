@@ -7,6 +7,8 @@ import articles from '@/components/middle/articles'
 import think from '@/components/middle/think'
 import articlelisttest from '@/components/middle/articleListTest'
 import articletest from '@/components/middle/articleTest'
+import project from '@/components/middle/project'
+import about from '@/components/middle/about'
 
 Vue.use(Router)
 
@@ -48,6 +50,16 @@ export default new Router({
           path: '/articletest/:index',
           name: 'articletest',
           component: articletest
+        },
+        {
+          path: '/project',
+          name: 'project',
+          component: project
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: about
         }
       ]
     }
