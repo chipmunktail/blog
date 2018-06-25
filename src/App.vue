@@ -63,9 +63,9 @@
     min-width: 1024px;
     /*background: -webkit-linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
     /*background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
-    background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);
-    background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);
-    /*background-color: #eeeeee;*/
+    /*background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
+    /*background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
+    background-color: #b7b7b7;
   }
 
   header {

@@ -2,7 +2,10 @@
   <div class="menu">
     <ul>
       <li v-for="n in menuList" :key="n.href" :class="{active:(active===n.href.split('/')[1])}" @click="action">
-        <router-link :to="n.href" class="link">{{n.text}}</router-link>
+        <router-link :to="n.href" class="link">
+          <span :class="'iconfont '+n.icon"></span>
+          {{n.text}}
+        </router-link>
       </li>
       <!--<li @click="getClassList(n)">文章内容</li>-->
     </ul>
@@ -96,6 +99,9 @@
   .link {
     display: inline-block;
     width: 100%;
+    .iconfont{
+      font-weight: bold;
+    }
   }
 
   .active {

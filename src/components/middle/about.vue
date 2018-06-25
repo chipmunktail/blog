@@ -1,31 +1,104 @@
 <template>
   <div class="about">
-    <h2>关于blog:</h2>
-    <div>为什么自己开发blog呢？</div>
-    <div>因为从接触电脑开始就一直打算做一个自己的blog，好好经营它（也许）。</div>
-    <div>我会将我知道的学到的梳理成文章发布出来，记录我的学习历程，blog将见证我的历史。</div>
-    <div>同时也会分享有意思的东西。</div>
-    <h2>关于我：</h2>
-    <div>我是一个前端开发者，我很崇拜Ryan Dahl的才识，向往有一天能站在同样的高度和大神们谈笑风生。😄</div>
-    <h2>其他：</h2>
-    <a href="https://www.zhihu.com/people/qd-luo-53" target="_blank" title="没干货">知乎</a>
-    <a href="https://github.com/hjdtl" target="_blank" title="star吧">github</a>
-    <a>微信</a>
-    <h2>友链：</h2>
+    <div class="about-box">
+      <h2><i class="iconfont icon-Blog"></i>关于blog:</h2>
+      <div>为什么自己开发blog呢？</div>
+      <div>因为从接触电脑开始就一直打算做一个自己的blog，好好经营它（也许）。</div>
+      <div>我会将我知道的学到的梳理成文章发布出来，记录我的学习历程，blog将见证我的历史。</div>
+      <div>同时也会分享有意思的东西。</div>
+    </div>
+    <div class="about-box">
+      <h2><i class="iconfont icon-account"></i>关于我：</h2>
+      <div>我是一个前端开发者，我很崇拜Ryan Dahl的才识，向往有一天能站在同样的高度和大神们谈笑风生。😄</div>
+    </div>
+    <div class="about-box">
+      <h2><i class="iconfont icon-code2"></i>其他：</h2>
+      <a href="https://github.com/hjdtl" target="_blank" title="star吧">
+        <svg class="icon icon-github" aria-hidden="true">
+          <use xlink:href="#icon-github"></use>
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.zhihu.com/people/qd-luo-53" target="_blank" title="没干货">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zhihu"></use>
+        </svg>
+        <span>知乎</span>
+      </a>
+      <a title="bHFkMjAxMA==">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-WeChat"></use>
+        </svg>
+        <span>微信</span>
+      </a>
+      <a href="mailto:hjdtld@163.com" title="hjdtl">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-email"></use>
+        </svg>
+        <span>Email</span>
+      </a>
+    </div>
+    <div class="about-box">
+      <h2><i class="iconfont icon-zhinanzhen"></i>友链：</h2>
+    </div>
   </div>
 </template>
 
 <script>
+  import '../../assets/font_697398_fg8scamrzd9/iconfont'
   export default {
     name: 'about'
   }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
   .about {
-    width: 640px;
+    width: 630px;
     height: 100%;
+  }
+  h2{
+    margin-top: 0;
+    i{
+      display: inline-block;
+      margin: 0 5px 0 0;
+      font-size: 25px;
+      color: #0086b3;
+    }
+  }
+  a{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    vertical-align: top;
+    height: 25px;
+    line-height: 25px;
+    .icon{
+      font-size: 25px;
+      margin: 0 3px 0 0;
+    }
+    .icon-github{
+      font-size: 21px;
+    }
+  }
+  .icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+  .about-box{
+    padding: 5px;
+    margin: 0 0 10px 0;
+    border-radius: 3px;
     color: rgba(67, 67, 67, 0.9);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+    -webkit-transition-property: background-color;
+    -webkit-transition-duration: 0.4s;
+    -webkit-transition-timing-function: ease;
+  }
+  .about-box:hover {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.1);
   }
 </style>

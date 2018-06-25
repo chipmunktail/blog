@@ -6,7 +6,7 @@ import router from './router'
 import store from './store/index'
 import axios from 'axios'
 import '@/assets/common.css'
-import './assets/font_697398_rg1bwtgagnndbo6r/iconfont.css'
+import './assets/font_697398_fg8scamrzd9/iconfont.css'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/dracula.css'
 
