@@ -35,15 +35,16 @@
       getClassList (classId) {
         store.dispatch('getClassList', classId)
       },
-      // 相应路由 相关操作
+      // 对应路由 相关操作
       action () {
         if (this.$route.name === 'articlelisttest') {
           this.$store.dispatch('getArticleTest')
           this.$store.dispatch('getTags', 0)
-        }
-        if (this.$route.name === 'think') {
+        } else if (this.$route.name === 'think') {
           this.$store.dispatch('getThinkList')
           this.$store.dispatch('getTags', 1)
+        } else {
+          this.$store.dispatch('getTags')
         }
       }
     },
@@ -99,7 +100,7 @@
   .link {
     display: inline-block;
     width: 100%;
-    .iconfont{
+    .iconfont {
       font-weight: bold;
     }
   }

@@ -7,6 +7,7 @@
       <div v-html="n.content" v-highlight></div>
       <div class="time">{{n.date | timeFormat}}</div>
     </div>
+    <div v-if="thinkList.length===0" class="no-more">没有想法</div>
   </div>
 </template>
 
@@ -17,10 +18,10 @@
   export default {
     components: {Tag},
     name: 'think',
-    created () {
-      this.$store.dispatch('getThinkList')
-      this.$store.dispatch('getTags', 1)
-    },
+    // created () {
+    // this.$store.dispatch('getThinkList')
+    // this.$store.dispatch('getTags', 1)
+    // },
     computed: {
       thinkList () {
         return this.$store.state.thinkList
@@ -90,5 +91,15 @@
   .time {
     font-size: 14px;
     color: #767676;
+  }
+
+  .no-more {
+    width: 640px;
+    border-radius: 3px;
+    color: rgba(67, 67, 67, 0.9);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+    text-align: center;
+    line-height: 45px;
   }
 </style>

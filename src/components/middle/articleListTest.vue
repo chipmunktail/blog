@@ -16,6 +16,7 @@
         </div>
       </div>
     </div>
+    <div v-if="article.length===0" class="no-more">没有文章</div>
   </div>
 </template>
 
@@ -24,9 +25,9 @@
 
   export default {
     name: 'article-list-test',
-    created () {
-      this.$store.dispatch('getArticleTest')
-    },
+    // created () {
+    //  this.$store.dispatch('getArticleTest')
+    // },
     computed: {
       article () {
         return this.$store.state.articleTest
@@ -67,7 +68,7 @@
 
   .article-box:hover {
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 3px 2px 1px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.1);
   }
 
   .article-img-con {
@@ -126,5 +127,15 @@
   .article-info span:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  .no-more {
+    width: 640px;
+    border-radius: 3px;
+    color: rgba(67, 67, 67, 0.9);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
+    text-align: center;
+    line-height: 45px;
   }
 </style>
