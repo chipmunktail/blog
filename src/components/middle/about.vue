@@ -45,7 +45,7 @@
 </template>
 
 <script>
-  import '../../assets/font_697398_fg8scamrzd9/iconfont'
+  import '../../assets/font_697398_nw6dg7maut/iconfont'
   export default {
     name: 'about'
   }
