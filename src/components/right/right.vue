@@ -1,6 +1,9 @@
 <template>
-  <div class="tags-con">
-    <tag v-for="n in tags" v-bind:key="n.id" :tag="n"></tag>
+  <div class="tags">
+    <div class="title">Tags</div>
+    <div class="tags-con">
+      <tag v-for="n in tags" v-bind:key="n.id" :tag="n"></tag>
+    </div>
   </div>
 </template>
 
@@ -19,16 +22,22 @@
 </script>
 
 <style scoped>
-  .tags-con {
+  .tags {
     display: inline-block;
     position: fixed;
+    /*overflow: hidden;*/
     width: 238px;
     height: 225px;
-    overflow-y: scroll;
     background-color: rgba(248, 248, 248, 0.3);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     color: #000;
     border-radius: 3px;
+  }
+
+  .tags-con {
+    overflow-y: scroll;
+    width: 238px;
+    height: 204px;
   }
 
   .tags-con::-webkit-scrollbar {
@@ -41,25 +50,13 @@
     background-color: rgba(67, 67, 67, 0.9);
   }
 
-  .tag {
-    height: 25px;
-    line-height: 25px;
-    border-radius: 2px;
-    display: inline-block;
-    margin: 5px;
-    padding: 0 8px;
-    cursor: pointer;
-    background-color: rgba(248, 248, 248, 0.75);
-    -webkit-transition-property: background-color;
-    -webkit-transition-duration: 0.4s;
-    -webkit-transition-timing-function: ease;
-  }
-
-  .tag:hover {
-    background-color: rgb(195, 195, 195);
-  }
-
-  i:hover {
-    color: #55a532;
+  .title {
+    padding: 0 5px;
+    height: 21px;
+    line-height: 21px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: rgba(67, 67, 67, 0.9);
+    color: rgba(240, 240, 240, 0.6);
   }
 </style>

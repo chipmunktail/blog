@@ -37,10 +37,13 @@
       },
       // 对应路由 相关操作
       action () {
-        if (this.$route.name === 'articlelisttest') {
+        let route = this.$route.name
+        if (route === 'articlelisttest') {
           this.$store.dispatch('getArticleTest')
           this.$store.dispatch('getTags', 0)
-        } else if (this.$route.name === 'think') {
+        } else if (route === 'articletest') {
+          this.$store.dispatch('getTags', 0)
+        } else if (route === 'think') {
           this.$store.dispatch('getThinkList')
           this.$store.dispatch('getTags', 1)
         } else {
@@ -53,6 +56,8 @@
     },
     watch: {
       $route: function (n, o) {
+        // todo下面这个问题↓↓↓ 不用，其他目录点击tag跳到文章目录，tags不会过滤；用，其他目录点击tag跳到文章目录，文章不会过滤
+        // this.action()
         if (n.name === 'articles' || n.name === 'articlelist') {
           this.active = 'articlelist'
         } else if (n.name === 'articlelisttest' || n.name === 'articletest') {
