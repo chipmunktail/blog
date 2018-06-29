@@ -82,6 +82,7 @@
     width: 130px;
     position: fixed;
     user-select: none;
+    background-color: #fff;
   }
 
   a {

@@ -6,6 +6,7 @@
       </div>
     </header>
     <router-view/>
+    <div class="robot"></div>
   </div>
 </template>
 
@@ -66,12 +67,25 @@
     /*background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
     /*background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
     background-color: #fff;
-    /*background-image: url("http://193.112.200.223:4000/file/district92.jpg");*/
-    /*background-repeat: repeat-y;*/
-    /*background-size: 1024px auto;*/
-    /*background-position: top center;*/
+    background-image: url("http://193.112.200.223:4000/file/district92.jpg");
+    background-repeat: no-repeat;
+    background-size: 1024px auto;
+    background-attachment:fixed;
+    background-position: top center;
   }
 
+  .robot{
+    /*position: fixed;*/
+    /*z-index: 0;*/
+    /*bottom: -50px;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 150px;*/
+    /*background-image: url("http://193.112.200.223:4000/file/district92.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 120px auto;*/
+    /*background-position: bottom ;*/
+  }
   header {
     width: 100%;
     margin: 0 0 5px 0;
