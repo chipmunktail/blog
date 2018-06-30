@@ -66,8 +66,8 @@
     /*background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
     /*background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
     /*background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
-    background-color: #fff;
-    background-image: url("http://193.112.200.223:4000/file/district92.jpg");
+    /*background-color: #fff;*/
+    background-image: url("http://193.112.200.223:4000/file/district93.jpg");
     background-repeat: no-repeat;
     background-size: 1024px auto;
     background-attachment:fixed;

@@ -25,6 +25,7 @@
     mounted () {
       this.getMenusList()
       this.active = this.$route.name
+      this.action()
     },
     methods: {
       // 获取左侧栏列表数据
@@ -41,6 +42,7 @@
         if (route === 'articlelisttest') {
           this.$store.dispatch('getArticleTest')
           this.$store.dispatch('getTags', 0)
+          console.log(111)
         } else if (route === 'articletest') {
           this.$store.dispatch('getTags', 0)
         } else if (route === 'think') {
@@ -57,7 +59,7 @@
     watch: {
       $route: function (n, o) {
         // todo下面这个问题↓↓↓ 不用，其他目录点击tag跳到文章目录，tags不会过滤；用，其他目录点击tag跳到文章目录，文章不会过滤
-        // this.action()
+        this.action()
         if (n.name === 'articles' || n.name === 'articlelist') {
           this.active = 'articlelist'
         } else if (n.name === 'articlelisttest' || n.name === 'articletest') {
@@ -82,7 +84,6 @@
     width: 130px;
     position: fixed;
     user-select: none;
-    background-color: #fff;
   }
 
   a {
