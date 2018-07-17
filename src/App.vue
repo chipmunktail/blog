@@ -66,12 +66,12 @@
     /*background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
     /*background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
     /*background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
-    /*background-color: #fff;*/
-    background-image: url("http://193.112.200.223:4000/file/district93.jpg");
-    background-repeat: no-repeat;
-    background-size: 1024px auto;
-    background-attachment:fixed;
-    background-position: top center;
+    background-color: #d6d6d6;
+    /*background-image: url("http://www.asheicy.com:4000/file/district93.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 1024px auto;*/
+    /*background-attachment:fixed;*/
+    /*background-position: top center;*/
   }
 
   .robot{
@@ -81,7 +81,7 @@
     /*left: 0;*/
     /*width: 100%;*/
     /*height: 150px;*/
-    /*background-image: url("http://193.112.200.223:4000/file/district92.jpg");*/
+    /*background-image: url("http://www.asheicy.com:4000/file/district92.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: 120px auto;*/
     /*background-position: bottom ;*/
