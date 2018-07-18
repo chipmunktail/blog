@@ -6,11 +6,11 @@ import router from './router'
 import store from './store/index'
 import axios from 'axios'
 import '@/assets/common.css'
-import './assets/font_697398_rl6wfqbhqd/iconfont.css'
+import './assets/font_697398_t27dligvh77/iconfont.css'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/dracula.css'
 
-axios.defaults.baseURL = 'http://193.112.200.223:4000'
+axios.defaults.baseURL = 'http://www.asheicy.com:4000'
 Vue.prototype.$axios = axios
 
 Vue.directive('highlight', el => {
