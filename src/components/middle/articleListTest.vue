@@ -10,7 +10,7 @@
         </div>
         <div class="article-content">{{n.describes}}</div>
         <div class="article-info">
-          <span @click="to(`/articletest/${i}`)">发布于 {{n.date | timeFormat}}</span>
+          <span @click="to(`/articletest/${i}`)">发布于 {{counter(n.date)}}</span>
           <span @click="to(`/articletest/${i}`)">阅读 {{n.pv}}</span>
           <span @click="to(`/articletest/${i}`)">回复 {{n.comment}}</span>
         </div>
@@ -21,7 +21,8 @@
 </template>
 
 <script>
-  import {timeFormat} from '@/utils/filter'
+  import {timeFormat} from '@/utils/filter' // todo 废弃
+  import Datecounter from 'datecounter'
 
   export default {
     name: 'article-list-test',
@@ -39,6 +40,9 @@
     methods: {
       to (route) {
         this.$router.push(route)
+      },
+      counter (time) {
+        return new Datecounter()(time)
       }
     }
   }

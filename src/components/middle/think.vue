@@ -5,15 +5,16 @@
         <tag v-for="z in matchTags(n.tag,tags)" :key="z.id" :tag="z"/>
       </div>
       <div v-html="n.content" v-highlight></div>
-      <div class="time">{{n.date | timeFormat}}</div>
+      <div class="time">{{counter(n.date)}}</div>
     </div>
     <div v-if="thinkList.length===0" class="no-more">没有想法</div>
   </div>
 </template>
 
 <script>
-  import {timeFormat} from '@/utils/filter'
+  import {timeFormat} from '@/utils/filter' // todo 废弃
   import Tag from '../common/tag'
+  import Datecounter from 'datecounter'
 
   export default {
     components: {Tag},
@@ -49,6 +50,9 @@
         } else {
           return ''
         }
+      },
+      counter (time) {
+        return new Datecounter()(time)
       }
     },
     filters: {
