@@ -19,6 +19,12 @@
         </svg>
         <span>GitHub</span>
       </a>
+      <a href="https://www.npmjs.com/~hjdtl" target="_blank" title="star吧">
+        <svg class="icon icon-npm-logo" aria-hidden="true">
+          <use xlink:href="#icon-npm-logo"></use>
+        </svg>
+        <span>npm</span>
+      </a>
       <a href="https://www.zhihu.com/people/qd-luo-53" target="_blank" title="没干货">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-zhihu"></use>
@@ -53,7 +59,7 @@
 
 <style lang="less" scoped>
   .about {
-    width: 630px;
+    width: 640px;
     height: 100%;
   }
   h2{
@@ -78,6 +84,12 @@
     }
     .icon-github{
       font-size: 21px;
+    }
+    .icon-npm-logo{
+      height: 21.88px;
+      width: 21.88px;
+      background-color: #cb3837;
+      border-radius: 100%;
     }
   }
   .icon {
