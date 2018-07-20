@@ -14,7 +14,6 @@
 <script>
   import {timeFormat} from '@/utils/filter' // todo 废弃
   import Tag from '../common/tag'
-  import Datecounter from 'datecounter'
 
   export default {
     components: {Tag},
@@ -52,7 +51,7 @@
         }
       },
       counter (time) {
-        return new Datecounter()(time)
+        return this.$datecounter(time)
       }
     },
     filters: {

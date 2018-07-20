@@ -9,6 +9,9 @@ import '@/assets/common.css'
 import './assets/font_697398_t27dligvh77/iconfont.css'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/dracula.css'
+import {vDatecounter} from 'datecounter'
+
+Vue.use(vDatecounter)
 
 axios.defaults.baseURL = 'http://www.asheicy.com:4000'
 Vue.prototype.$axios = axios

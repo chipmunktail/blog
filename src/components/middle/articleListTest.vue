@@ -22,7 +22,6 @@
 
 <script>
   import {timeFormat} from '@/utils/filter' // todo 废弃
-  import Datecounter from 'datecounter'
 
   export default {
     name: 'article-list-test',
@@ -42,7 +41,7 @@
         this.$router.push(route)
       },
       counter (time) {
-        return new Datecounter()(time)
+        return this.$datecounter(time)
       }
     }
   }
