@@ -3,6 +3,11 @@
     <header>
       <div>
         <span class="log" @click="index">&lt;/HJDTL&gt;</span>
+        <div class="lantern-con">
+          <svg class="icon lantern" aria-hidden="true">
+            <use xlink:href="#icon-denglong1"></use>
+          </svg>
+        </div>
       </div>
     </header>
     <router-view/>
@@ -92,17 +97,22 @@
     padding: 5px;
     font-size: 25px;
     font-family: Arial;
-    background: rgba(67, 67, 67, 0.9);
-    color: rgba(240, 240, 240, 0.6);
+    background: rgba(173, 38, 44, 0.9);
+    color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     text-align: center;
     user-select: none;
     position: fixed;
+    display: flex;
+    justify-content: center;
   }
 
   header div {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     width: 1024px;
+    height: 29px;
+    line-height: 29px;
     text-align: left;
   }
 
@@ -111,6 +121,22 @@
     transform: rotate(-5deg);
     cursor: pointer;
   }
-
+  /*new year theme*/
+  .icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+  }
+  .lantern-con{
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+  }
+  .lantern{
+    width: 40px;
+    height: 25px;
+  }
   /*}*/
 </style>

@@ -51,7 +51,7 @@
 </template>
 
 <script>
-  import '../../assets/font_697398_t27dligvh77/iconfont'
+  import '../../assets/font_697398_2bbnj4yhll7/iconfont'
   export default {
     name: 'about'
   }
