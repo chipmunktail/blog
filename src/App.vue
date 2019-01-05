@@ -71,7 +71,7 @@
     /*background: linear-gradient(to right, #c5eaff, #ffd891, #ffaa9f);*/
     /*background: -webkit-linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
     /*background: linear-gradient(0deg, #FFFFFF, #dff3ff, #CCFFE8, #ffd891, #ffaa9f);*/
-    background-color: #d6d6d6;
+    background-color: #fff;
     /*background-image: url("http://www.asheicy.com:4000/file/district93.jpg");*/
     /*background-repeat: no-repeat;*/
     /*background-size: 1024px auto;*/
