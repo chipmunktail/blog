@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
+import axios from '../config/axios'
 
 Vue.use(Vuex)
 
@@ -22,7 +22,7 @@ let getters = {
 let actions = {
   getMenusList ({commit}) {
     // commit('fill_menusList', [{text: '文章', href: '/articlelist'}, {text: '其他', href: '/class'}])
-    axios.get('http://www.asheicy.com:4000/menu')
+    axios.get('/menu')
       .then((res) => {
         commit('fill_menusList', res.data.data)
       })
@@ -39,7 +39,7 @@ let actions = {
   },
   // TEST 获取article
   getArticleTest ({commit}) {
-    axios.get('http://www.asheicy.com:4000/articleTest')
+    axios.get('/articleTest')
       .then((res) => {
         commit('setArticleTest', res.data.data)
       })
@@ -49,7 +49,7 @@ let actions = {
   },
   // 过滤 文章
   filterArticle ({commit}, tagId) {
-    axios.get('http://www.asheicy.com:4000/filterArticle', {params: {tagId: tagId}})
+    axios.get('/filterArticle', {params: {tagId: tagId}})
       .then((res) => {
         commit('setArticleTest', res.data.data)
       })
@@ -59,7 +59,7 @@ let actions = {
   },
   // 过滤 想法
   filterThink ({commit}, tagId) {
-    axios.get('http://www.asheicy.com:4000/filterThink', {params: {tagId: tagId}})
+    axios.get('/filterThink', {params: {tagId: tagId}})
       .then((res) => {
         commit('setThinkList', res.data.data)
       })
@@ -70,7 +70,7 @@ let actions = {
   // 想法列表
   getThinkList ({commit}, thinkId) {
     const params = thinkId ? {thinkId: thinkId} : ''
-    axios.get('http://www.asheicy.com:4000/thinkList', {params: params})
+    axios.get('/thinkList', {params: params})
       .then((res) => {
         commit('setThinkList', res.data.data)
       })
@@ -84,7 +84,7 @@ let actions = {
     if (typeof type === 'number') {
       params = {type: type}
     }
-    axios.get('http://www.asheicy.com:4000/getTag', {params: params})
+    axios.get('/getTag', {params: params})
       .then((res) => {
         commit('setTags', res.data.data)
       })

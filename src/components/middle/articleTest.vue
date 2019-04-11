@@ -38,7 +38,7 @@
           })
       },
       articlePV () {
-        this.$axios.get('articlePV', {params: {articleId: this.article.id}})
+        this.$axios.get('/articlePV', {params: {articleId: this.article.id}})
           .then((e) => {
             console.log(e)
           })

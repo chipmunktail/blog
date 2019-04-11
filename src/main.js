@@ -4,16 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store/index'
-import axios from 'axios'
+import axios from './config/axios'
 import '@/assets/common.css'
-import './assets/font_697398_2bbnj4yhll7/iconfont.css'
+import './assets/font_697398_i9zborknukf/iconfont.css'
+import './assets/font_697398_i9zborknukf/iconfont'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/dracula.css'
 import {vDatecounter} from 'datecounter'
 
 Vue.use(vDatecounter)
 
-axios.defaults.baseURL = 'http://www.asheicy.com:4000'
+// axios.defaults.baseURL = 'http://www.asheicy.com:4000'
 Vue.prototype.$axios = axios
 
 Vue.directive('highlight', el => {

@@ -5,7 +5,7 @@
         <span class="log" @click="index">&lt;/HJDTL&gt;</span>
         <div class="lantern-con">
           <svg class="icon lantern" aria-hidden="true">
-            <use xlink:href="#icon-denglong1"></use>
+            <use xlink:href="#icon-shulin"></use>
           </svg>
         </div>
       </div>
@@ -97,7 +97,7 @@
     padding: 5px;
     font-size: 25px;
     font-family: Arial;
-    background: rgba(173, 38, 44, 0.9);
+    background: rgba(58, 173, 122, 0.9);
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     text-align: center;
