@@ -1,12 +1,15 @@
 <template>
-  <div class="index">
-    <div class="menu">
-      <Menu/>
+  <div>
+    <div class="index" ref="index">
+      <div class="menu">
+        <Menu/>
+      </div>
+      <router-view/>
+      <div class="right">
+        <right/>
+      </div>
     </div>
-    <router-view/>
-    <div class="right">
-      <right/>
-    </div>
+    <record/>
   </div>
 </template>
 
@@ -14,13 +17,18 @@
   import Menu from './left/menu'
   import Class from './middle/class'
   import Right from './right/right'
+  import Record from './record'
 
   export default {
     components: {
       Right,
       Class,
-      Menu},
-    name: 'index'
+      Menu,
+      Record},
+    name: 'index',
+    mounted () {
+      this.$refs.index.style.minHeight = (document.body.clientHeight - 70) + 'px'
+    }
   }
 </script>
 
