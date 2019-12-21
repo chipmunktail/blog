@@ -2,14 +2,14 @@
   <div class="about">
     <div class="about-box">
       <h2><i class="iconfont icon-Blog"></i>关于blog:</h2>
-      <div>为什么自己开发blog呢？</div>
-      <div>因为从接触电脑开始就一直打算做一个自己的blog，好好经营它（也许）。</div>
-      <div>我会将我知道的学到的梳理成文章发布出来，记录我的学习历程，blog将见证我的历史。</div>
+      <!--<div>为什么自己开发blog呢？</div>-->
+      <!--<div>因为从接触电脑开始就一直打算做一个自己的blog，好好经营它（也许）。</div>-->
+      <div>写文章的地方，记录我的一些东西，写进blog。</div>
       <div>同时也会分享有意思的东西。</div>
     </div>
     <div class="about-box">
       <h2><i class="iconfont icon-account"></i>关于我：</h2>
-      <div>我是一个前端开发者，我很崇拜Ryan Dahl的才识，向往有一天能站在同样的高度和大神们谈笑风生。😄</div>
+      <div>一个 web developer.😄</div>
     </div>
     <div class="about-box">
       <h2><i class="iconfont icon-code2"></i>其他：</h2>
@@ -25,12 +25,12 @@
         </svg>
         <span>npm</span>
       </a>
-      <a href="https://www.zhihu.com/people/qd-luo-53" target="_blank" title="没干货">
-        <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-zhihu"></use>
-        </svg>
-        <span>知乎</span>
-      </a>
+      <!--<a href="https://www.zhihu.com/people/qd-luo-53" target="_blank" title="没干货">-->
+      <!--<svg class="icon" aria-hidden="true">-->
+      <!--<use xlink:href="#icon-zhihu"></use>-->
+      <!--</svg>-->
+      <!--<span>知乎</span>-->
+      <!--</a>-->
       <a title="bHFkMjAxMA==">
         <svg class="icon" aria-hidden="true">
           <use xlink:href="#icon-WeChat"></use>
@@ -44,15 +44,23 @@
         <span>Email</span>
       </a>
     </div>
-    <div class="about-box">
-      <h2><i class="iconfont icon-zhinanzhen"></i>友链：</h2>
-    </div>
   </div>
 </template>
 
 <script>
+  import '../../assets/font_697398_i9zborknukf/iconfont'
+
   export default {
-    name: 'about'
+    name: 'about',
+    mounted () {
+      this.$axios.get('/visit')
+        .then((e) => {
+          console.log(e)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    }
   }
 </script>
 
@@ -61,43 +69,48 @@
     width: 640px;
     height: 100%;
   }
-  h2{
+
+  h2 {
     margin-top: 0;
-    i{
+    i {
       display: inline-block;
       margin: 0 5px 0 0;
       font-size: 25px;
       color: #0086b3;
     }
   }
-  a{
+
+  a {
     display: inline-flex;
     justify-content: flex-start;
     align-items: flex-start;
     vertical-align: top;
     height: 25px;
     line-height: 25px;
-    .icon{
+    .icon {
       font-size: 25px;
       margin: 0 3px 0 0;
     }
-    .icon-github{
+    .icon-github {
       font-size: 21px;
     }
-    .icon-npm-logo{
+    .icon-npm-logo {
       height: 21.88px;
       width: 21.88px;
       background-color: #cb3837;
       border-radius: 100%;
     }
   }
+
   .icon {
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
   }
-  .about-box{
+
+  .about-box {
     padding: 5px;
     margin: 0 0 10px 0;
     border-radius: 3px;
@@ -108,6 +121,7 @@
     -webkit-transition-duration: 0.4s;
     -webkit-transition-timing-function: ease;
   }
+
   .about-box:hover {
     background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.1);

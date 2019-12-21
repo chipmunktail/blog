@@ -22,19 +22,33 @@
     name: 'project',
     data () {
       return {
-        projectList: [{href: 'https://github.com/hjdtl/blog', name: 'blog', describe: '这个博客项目的源码', star: 0, fork: 0},
+        projectList: [{href: 'https://github.com/hjdtl/blog', name: 'blog', describe: 'blog UI', star: 2, fork: 0},
           {
             href: 'https://github.com/hjdtl/blog-admin',
             name: 'blog-admin',
-            describe: '这个博客项目的后台管理源码',
+            describe: 'blog内容管理',
             star: 0,
             fork: 0
           },
-          {href: 'https://github.com/hjdtl/AsheUI', name: 'AsheUI', describe: '为Vue2设计的UI框架', star: 0, fork: 0},
+          {href: 'https://github.com/hjdtl/AsheUI', name: 'AsheUI', describe: 'Vue2.x UI框架', star: 0, fork: 0},
           {
             href: 'https://github.com/hjdtl/web-token-validation',
             name: 'web-token-validation',
-            describe: '基于Token的WEB后台认证机制实现方案',
+            describe: 'Web Token 实现方法',
+            star: 0,
+            fork: 0
+          },
+          {
+            href: 'https://github.com/hjdtl/noteIt',
+            name: 'noteIt',
+            describe: 'react app',
+            star: 0,
+            fork: 0
+          },
+          {
+            href: 'https://github.com/hjdtl/nestpress',
+            name: 'nestpress',
+            describe: '尝试用Ts实现的web server app',
             star: 0,
             fork: 0
           }]
