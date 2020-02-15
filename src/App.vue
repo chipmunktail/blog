@@ -2,7 +2,8 @@
   <div id="app">
     <header>
       <div>
-        <span class="log" @click="index">&lt;/HJDTL&gt;</span>
+        <!--<span class="log" @click="index">&lt;/HJDTL&gt;</span>-->
+        <logo />
         <div class="lantern-con">
           <svg class="icon lantern" aria-hidden="true">
             <use xlink:href="#icon-shulin"></use>
@@ -16,8 +17,10 @@
 </template>
 
 <script>
+  import logo from '../src/components/art/logo'
   export default {
     name: 'App',
+    components: {logo},
     mounted () {
       this.log()
     },
@@ -97,7 +100,7 @@
     padding: 5px;
     font-size: 25px;
     font-family: Arial;
-    background: rgba(58, 173, 122, 0.9);
+    /*background: rgba(58, 173, 122, 0.9);*/
     color: #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16);
     text-align: center;
