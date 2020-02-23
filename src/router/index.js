@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import index from '@/components/index'
-import articlelist from '@/components/middle/articlelist'
-import class_ from '@/components/middle/class'
-import articles from '@/components/middle/articles'
-import think from '@/components/middle/think'
-import articlelisttest from '@/components/middle/articleListTest'
-import articletest from '@/components/middle/articleTest'
-import project from '@/components/middle/project'
-import about from '@/components/middle/about'
+import {
+  index,
+  articlelist,
+  class_,
+  articles,
+  think,
+  articlelisttest,
+  articletest,
+  project,
+  about
+} from '@/components/index.js'
 
 Vue.use(Router)
 

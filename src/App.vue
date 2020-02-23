@@ -4,11 +4,11 @@
       <div>
         <!--<span class="log" @click="index">&lt;/HJDTL&gt;</span>-->
         <logo />
-        <div class="lantern-con">
+        <!-- <div class="lantern-con">
           <svg class="icon lantern" aria-hidden="true">
             <use xlink:href="#icon-shulin"></use>
           </svg>
-        </div>
+        </div> -->
       </div>
     </header>
     <router-view/>
