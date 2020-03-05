@@ -6,11 +6,13 @@ import router from './router'
 import store from './store/index'
 import axios from './config/axios'
 import '@/assets/common.css'
-import './assets/font_697398_i9zborknukf/iconfont.css'
-import './assets/font_697398_i9zborknukf/iconfont'
+import './assets/font_697398_tp17jhc1v7e/iconfont.css'
+import './assets/font_697398_tp17jhc1v7e/iconfont'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/dracula.css'
 import {vDatecounter} from 'datecounter'
+import '@/assets/styles/hack.css'
+// import '@/assets/styles/white.css'
 
 Vue.use(vDatecounter)
 

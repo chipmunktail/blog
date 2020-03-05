@@ -1,10 +1,8 @@
 <template>
   <div class="about">
     <div class="about-box">
-      <h2><i class="iconfont icon-Blog"></i>关于blog:</h2>
-      <!--<div>为什么自己开发blog呢？</div>-->
-      <!--<div>因为从接触电脑开始就一直打算做一个自己的blog，好好经营它（也许）。</div>-->
-      <div>写文章的地方，记录我的一些东西，写进blog。</div>
+      <h2><i class="iconfont icon-Blog"></i>关于小站:</h2>
+      <div>写文章的地方，记录生活和学习中的东西。</div>
       <div>同时也会分享有意思的东西。</div>
     </div>
     <div class="about-box">
@@ -48,7 +46,7 @@
 </template>
 
 <script>
-  import '../../assets/font_697398_i9zborknukf/iconfont'
+  import '../../assets/font_697398_tp17jhc1v7e/iconfont'
 
   export default {
     name: 'about',

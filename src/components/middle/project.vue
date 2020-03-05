@@ -22,11 +22,11 @@
     name: 'project',
     data () {
       return {
-        projectList: [{href: 'https://github.com/hjdtl/blog', name: 'blog', describe: 'blog UI', star: 2, fork: 0},
+        projectList: [{href: 'https://github.com/hjdtl/blog', name: 'golb', describe: 'golb UI', star: 2, fork: 0},
           {
             href: 'https://github.com/hjdtl/blog-admin',
-            name: 'blog-admin',
-            describe: 'blog内容管理',
+            name: 'golb-admin',
+            describe: 'golb内容管理',
             star: 0,
             fork: 0
           },
